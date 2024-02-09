@@ -1,2 +1,1 @@
 # TravelJournal
-# TravelJournal
