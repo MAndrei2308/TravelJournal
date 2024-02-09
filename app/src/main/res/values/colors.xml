@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">@color/design_default_color_primary</color>
+    <color name="colorPrimaryDark">@color/design_default_color_primary_dark</color>
+    <color name="about_us">#FDD400</color>
+    <color name="contact_header">#1C2566</color>
+</resources>

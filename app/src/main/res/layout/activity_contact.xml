@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactActivity">
+
+    <!-- Toolbar pentru meniul de navigare -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Restul conținutului activității -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/contact_header"
+        android:orientation="vertical">
+
+        <!-- Imaginea de fundal pentru antetul paginii Contact -->
+        <ImageView
+            android:id="@+id/about_us_header_image"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/contact_header" />
+
+        <!-- Textul de prezentare pentru pagina de contact -->
+        <TextView
+            android:id="@+id/contact_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pentru orice întrebări sau sugestii, vă rugăm să ne contactați folosind formularul de mai jos."
+            android:textColor="@color/white"
+            android:textSize="28sp" />
+
+        <!-- Container pentru formularul de contact -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp">
+
+            <!-- Câmpul pentru introducerea numelui -->
+            <EditText
+                android:id="@+id/contact_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Numele dvs."
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="28dp" />
+
+            <!-- Câmpul pentru introducerea adresei de email -->
+            <EditText
+                android:id="@+id/contact_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Adresa de email"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="28dp" />
+
+            <!-- Câmpul pentru introducerea mesajului -->
+            <EditText
+                android:id="@+id/contact_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mesajul dvs."
+                android:minLines="3"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="28dp" />
+
+            <!-- Butonul de trimitere a mesajului -->
+            <Button
+                android:id="@+id/contact_send_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Trimiteți mesajul"
+                android:textSize="28dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Meniul de navigare -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

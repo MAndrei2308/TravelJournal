@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/about_us_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutUsActivity">
+
+    <!-- Toolbar pentru meniul de navigare -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Container pentru conținutul principal al paginii -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/about_us"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Imaginea de fundal pentru antetul paginii About Us -->
+        <ImageView
+            android:id="@+id/about_us_header_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/about_us_header" />
+
+        <!-- Textul de prezentare a companiei -->
+        <TextView
+            android:id="@+id/about_us_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Suntem o companie dedicată inovației și dezvoltării de soluții tehnologice pentru a îmbunătăți viețile oamenilor."
+            android:textSize="18sp" />
+
+        <!-- Container pentru prezentarea echipei -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp">
+
+            <!-- Textul de prezentare a echipei -->
+            <TextView
+                android:id="@+id/about_us_team_intro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Echipa noastră este formată din experți în diverse domenii, de la programare la marketing și design grafic."
+                android:textSize="18sp" />
+
+            <!-- Listă cu membrii echipei -->
+            <ListView
+                android:id="@+id/about_us_team_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:dividerHeight="0dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Meniul de navigare -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="team_members">
+        <item>John Doe</item>
+        <item>Jane Smith</item>
+        <item>Bob Johnson</item>
+        <item>Alice Lee</item>
+    </string-array>
+</resources>

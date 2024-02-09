@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TravelJournal</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="username_hint">Nume de utilizator</string>
+    <string name="password_hint">Parola</string>
+    <string name="login_button_text">Autentificare</string>
+    <string name="login_error_message">Nume de utilizator sau parolă incorectă.</string>
+    <string name="login_error_username">Numele de utilizator este incorect</string>
+    <string name="login_error_password">Parola este incorecta</string>
+</resources>
